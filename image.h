@@ -22,7 +22,7 @@ private:
     size_t height;
     
 public:
-    Image(size_t w = 0, size_t h = 0) : width(w), height(h) {
+    Image(size_t w = 0, size_t h = 0): width(w), height(h) {
        pixels.reserve(w * h);
     }
     
@@ -47,6 +47,7 @@ public:
         file.putback(c);
         
         file >> width >> height;
+        
         if (width == 0 || height == 0) {
             throw std::runtime_error("некорректные размеры изображения");
         }
@@ -143,5 +144,6 @@ public:
         return result;
     }
 };
+
 
 #endif // IMAGE_H
