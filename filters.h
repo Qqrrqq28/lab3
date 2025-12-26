@@ -2,6 +2,7 @@
 #define FILTERS_H
 
 #include "image.h"
+
 #include <string>
 #include <memory>
 #include <vector>
@@ -14,7 +15,7 @@ public:
     virtual ~IImageFilter() = default;
 };
 
-class BasicFilter : public IImageFilter {
+class BasicFilter: public IImageFilter {
 protected:
     std::string name;
     
