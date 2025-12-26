@@ -2,6 +2,7 @@
 #define FILTERS_H
 
 #include "image.h"
+
 #include <string>
 #include <memory>
 #include <vector>
