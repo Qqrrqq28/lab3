@@ -14,12 +14,12 @@ public:
     virtual ~IImageFilter() = default;
 };
 
-class BasicFilter : public IImageFilter {
+class BasicFilter: public IImageFilter {
 protected:
     std::string name;
     
 public:
-    explicit BasicFilter(const std::string& filterName) : name(filterName) {}
+    explicit BasicFilter(const std::string& filterName): name(filterName) {}
     
     std::string describe() const override {
         return name;
