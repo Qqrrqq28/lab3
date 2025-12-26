@@ -63,7 +63,7 @@ std::ostream& operator<<(std::ostream& os, const IImageFilter& filter) {
 }
 
 void applyFilterPipeline(const std::vector<std::unique_ptr<IImageFilter>>& pipeline, Image& image) {
-    for (const auto& filter : pipeline) {
+    for (const auto& filter: pipeline) {
         if (dynamic_cast<const GrayscaleFilter*>(filter.get())) {
             std::cout << "Grayscale\n";
         } 
